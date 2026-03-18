@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-black: #0D0D0D;
+  --color-orange: #FF6B00;
+  --color-orange-dark: #E05E00;
+  --color-card: #141414;
+  --color-card-light: #1A1A1A;
+  --color-muted: #888888;
+  --color-white: #FFFFFF;
+  --color-yoga: #22C55E;
+  --color-hiit: #FF6B00;
+  --color-spinning: #3B82F6;
+  --color-pilates: #A855F7;
+  --color-guc: #EC4899;
+  --font-heading: var(--font-oswald);
+  --font-body: var(--font-inter);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0D0D0D;
+  color: #FFFFFF;
+  font-family: var(--font-body), sans-serif;
+}
+
+::selection {
+  background: #FF6B00;
+  color: #0D0D0D;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D0D0D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FF6B00;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E05E00;
+}
+
+/* Diagonal lines pattern */
+.diagonal-lines {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 10px,
+    rgba(255, 107, 0, 0.03) 10px,
+    rgba(255, 107, 0, 0.03) 20px
+  );
+}
+
+/* Hero clip path */
+.clip-diagonal {
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* Masonry layout */
+.masonry-grid {
+  columns: 3;
+  column-gap: 1rem;
+}
+
+.masonry-grid > * {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .masonry-grid {
+    columns: 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .masonry-grid {
+    columns: 1;
+  }
+}
