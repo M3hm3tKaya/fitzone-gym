@@ -34,7 +34,7 @@ export const services = [
     icon: "apple",
   },
   {
-    title: "FONKSIYONEL ANTRENMAN",
+    title: "FONKSİYONEL ANTRENMAN",
     description: "Günlük yaşam performansınızı artıran fonksiyonel egzersizler.",
     icon: "zap",
   },
