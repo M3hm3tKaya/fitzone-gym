@@ -28,7 +28,7 @@ export default function SectionHeading({
           {accent}
         </span>
       )}
-      <h2 className="font-[family-name:var(--font-oswald)] text-4xl md:text-5xl lg:text-6xl font-bold tracking-wider uppercase mt-2">
+      <h2 className="font-[family-name:var(--font-oswald)] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-wider uppercase mt-2">
         {title}
       </h2>
       {subtitle && (

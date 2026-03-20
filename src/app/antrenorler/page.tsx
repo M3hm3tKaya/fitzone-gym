@@ -19,7 +19,7 @@ export default function AntrenorlerPage() {
       </section>
 
       {/* Trainers Grid */}
-      <section className="py-24 bg-black">
+      <section className="py-16 sm:py-24 bg-black overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {trainers.map((trainer, i) => (

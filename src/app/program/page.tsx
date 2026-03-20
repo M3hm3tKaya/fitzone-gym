@@ -20,7 +20,7 @@ function ClassCell({ cls }: { cls: ScheduleClass }) {
   return (
     <div
       className={clsx(
-        "rounded-sm p-3 border-l-2 transition-all duration-300 hover:-translate-y-0.5",
+        "rounded-sm p-3 sm:p-3 border-l-2 transition-all duration-300 hover:-translate-y-0.5 min-h-[44px]",
         color.bg,
         cls.type === "yoga" && "border-yoga",
         cls.type === "hiit" && "border-hiit",
@@ -109,13 +109,13 @@ export default function ProgramPage() {
       <section className="py-12 bg-black lg:hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Day Selector */}
-          <div className="flex overflow-x-auto gap-2 pb-4 mb-6 scrollbar-none">
+          <div className="flex overflow-x-auto gap-2 pb-4 mb-6 scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0">
             {weekDays.map((day) => (
               <button
                 key={day}
                 onClick={() => setSelectedDay(day)}
                 className={clsx(
-                  "shrink-0 font-[family-name:var(--font-oswald)] text-sm font-bold tracking-wider px-4 py-2 rounded-sm transition-all duration-300",
+                  "shrink-0 font-[family-name:var(--font-oswald)] text-sm font-bold tracking-wider px-5 py-3 min-h-[44px] min-w-[44px] rounded-sm transition-all duration-300",
                   selectedDay === day
                     ? "bg-orange text-black"
                     : "bg-card text-muted hover:text-white"

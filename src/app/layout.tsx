@@ -29,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr" className={`${oswald.variable} ${inter.variable} antialiased`}>
-      <body className="min-h-screen bg-black text-white font-[family-name:var(--font-inter)]">
+      <body className="min-h-screen bg-black text-white font-[family-name:var(--font-inter)] overflow-x-hidden">
         <Navbar />
         <main>{children}</main>
         <Footer />

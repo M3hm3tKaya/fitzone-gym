@@ -34,7 +34,7 @@ export default function TrainerCard({ name, specialty, experience, bio, index }:
       </div>
 
       {/* Info */}
-      <div className="p-6">
+      <div className="p-4 sm:p-6">
         <h3 className="font-[family-name:var(--font-oswald)] text-xl font-bold tracking-wider mb-1">
           {name}
         </h3>

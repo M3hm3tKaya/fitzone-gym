@@ -57,12 +57,12 @@ export default function TransformationCard({
         </div>
       </div>
 
-      <div className="p-6">
-        <div className="flex items-center justify-between mb-3">
-          <h4 className="font-[family-name:var(--font-oswald)] text-lg font-bold tracking-wider">
+      <div className="p-4 sm:p-6">
+        <div className="flex items-center justify-between gap-2 mb-3">
+          <h4 className="font-[family-name:var(--font-oswald)] text-base sm:text-lg font-bold tracking-wider truncate">
             {name}
           </h4>
-          <span className="text-orange text-xs font-semibold font-[family-name:var(--font-oswald)] tracking-wider">
+          <span className="text-orange text-xs font-semibold font-[family-name:var(--font-oswald)] tracking-wider shrink-0">
             {duration}
           </span>
         </div>

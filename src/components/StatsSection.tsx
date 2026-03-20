@@ -28,10 +28,10 @@ export default function StatsSection() {
               transition={{ duration: 0.4, delay: index * 0.1 }}
               className="text-center"
             >
-              <div className="font-[family-name:var(--font-oswald)] text-5xl md:text-6xl lg:text-7xl font-bold text-black">
+              <div className="font-[family-name:var(--font-oswald)] text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-black">
                 {stat.value}
               </div>
-              <div className="font-[family-name:var(--font-oswald)] text-sm md:text-base font-semibold tracking-[0.2em] text-black/60 mt-2">
+              <div className="font-[family-name:var(--font-oswald)] text-xs sm:text-sm md:text-base font-semibold tracking-[0.1em] sm:tracking-[0.2em] text-black/60 mt-2">
                 {stat.label}
               </div>
             </motion.div>

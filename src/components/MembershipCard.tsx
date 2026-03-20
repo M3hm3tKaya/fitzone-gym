@@ -33,9 +33,9 @@ export default function MembershipCard({
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay: index * 0.15 }}
       className={clsx(
-        "relative bg-card rounded-sm p-8 border transition-all duration-300",
+        "relative bg-card rounded-sm p-5 sm:p-6 md:p-8 border transition-all duration-300",
         popular
-          ? "border-orange scale-105 shadow-2xl shadow-orange/10"
+          ? "border-orange sm:scale-105 shadow-2xl shadow-orange/10"
           : "border-white/5 hover:border-white/10"
       )}
     >
@@ -50,7 +50,7 @@ export default function MembershipCard({
           {name}
         </h3>
         <div className="flex items-end justify-center gap-1">
-          <span className="font-[family-name:var(--font-oswald)] text-5xl font-bold text-orange">
+          <span className="font-[family-name:var(--font-oswald)] text-4xl sm:text-5xl font-bold text-orange">
             {price}
           </span>
           <span className="text-muted text-lg mb-1">TL {period}</span>
@@ -84,7 +84,7 @@ export default function MembershipCard({
       <Link
         href="/iletisim"
         className={clsx(
-          "block text-center font-[family-name:var(--font-oswald)] text-sm font-bold tracking-wider py-3.5 rounded-sm transition-all duration-300",
+          "block text-center font-[family-name:var(--font-oswald)] text-sm font-bold tracking-wider py-3.5 min-h-[44px] rounded-sm transition-all duration-300",
           popular
             ? "bg-orange text-black hover:bg-orange-dark"
             : "bg-white/5 text-white hover:bg-orange hover:text-black"

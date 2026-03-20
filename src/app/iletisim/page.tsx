@@ -40,9 +40,9 @@ export default function IletisimPage() {
       </section>
 
       {/* Content */}
-      <section className="py-24 bg-black">
+      <section className="py-16 sm:py-24 bg-black overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
             {/* Form */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -126,7 +126,7 @@ export default function IletisimPage() {
 
                 <button
                   type="submit"
-                  className="w-full font-[family-name:var(--font-oswald)] text-base font-bold tracking-wider bg-orange text-black py-4 rounded-sm hover:bg-orange-dark transition-colors duration-300"
+                  className="w-full font-[family-name:var(--font-oswald)] text-base font-bold tracking-wider bg-orange text-black py-4 min-h-[44px] rounded-sm hover:bg-orange-dark transition-colors duration-300"
                 >
                   GÖNDER
                 </button>
@@ -208,7 +208,7 @@ export default function IletisimPage() {
               </div>
 
               {/* Map Placeholder */}
-              <div className="bg-card-light rounded-sm overflow-hidden aspect-[4/3] relative">
+              <div className="bg-card-light rounded-sm overflow-hidden aspect-square sm:aspect-[4/3] relative">
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
                   <svg className="w-16 h-16 text-orange/20 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />

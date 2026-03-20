@@ -44,13 +44,13 @@ export default function GaleriPage() {
       {/* Filter */}
       <section className="py-8 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
             {galleryCategories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveFilter(cat)}
                 className={clsx(
-                  "font-[family-name:var(--font-oswald)] text-sm font-bold tracking-wider px-6 py-2.5 rounded-sm transition-all duration-300",
+                  "font-[family-name:var(--font-oswald)] text-xs sm:text-sm font-bold tracking-wider px-4 sm:px-6 py-2.5 min-h-[44px] rounded-sm transition-all duration-300",
                   activeFilter === cat
                     ? "bg-orange text-black"
                     : "bg-card text-muted hover:text-white"
@@ -64,7 +64,7 @@ export default function GaleriPage() {
       </section>
 
       {/* Masonry Grid */}
-      <section className="py-12 bg-black">
+      <section className="py-8 sm:py-12 bg-black overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="masonry-grid">
             <AnimatePresence>
@@ -138,7 +138,7 @@ export default function GaleriPage() {
             {/* Close */}
             <button
               onClick={closeLightbox}
-              className="absolute top-6 right-6 w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-orange transition-colors duration-300 z-10"
+              className="absolute top-4 right-4 sm:top-6 sm:right-6 w-12 h-12 min-w-[44px] min-h-[44px] bg-white/10 rounded-full flex items-center justify-center hover:bg-orange transition-colors duration-300 z-10"
             >
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -151,7 +151,7 @@ export default function GaleriPage() {
                 e.stopPropagation();
                 prevImage();
               }}
-              className="absolute left-4 md:left-8 w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-orange transition-colors duration-300 z-10"
+              className="absolute left-2 sm:left-4 md:left-8 w-12 h-12 min-w-[44px] min-h-[44px] bg-white/10 rounded-full flex items-center justify-center hover:bg-orange transition-colors duration-300 z-10"
             >
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
@@ -164,7 +164,7 @@ export default function GaleriPage() {
                 e.stopPropagation();
                 nextImage();
               }}
-              className="absolute right-4 md:right-8 w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-orange transition-colors duration-300 z-10"
+              className="absolute right-2 sm:right-4 md:right-8 w-12 h-12 min-w-[44px] min-h-[44px] bg-white/10 rounded-full flex items-center justify-center hover:bg-orange transition-colors duration-300 z-10"
             >
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
@@ -173,7 +173,7 @@ export default function GaleriPage() {
 
             {/* Image placeholder */}
             <div
-              className="max-w-4xl w-full mx-4 aspect-video bg-card-light rounded-sm flex items-center justify-center"
+              className="max-w-4xl w-full mx-4 sm:mx-8 aspect-[4/3] sm:aspect-video bg-card-light rounded-sm flex items-center justify-center overflow-hidden"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="text-center">

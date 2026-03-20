@@ -59,7 +59,7 @@ export default function Navbar() {
           {/* Mobile Toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5"
+            className="lg:hidden w-11 h-11 min-w-[44px] min-h-[44px] flex flex-col items-center justify-center gap-1.5"
             aria-label="Menü"
           >
             <motion.span
@@ -98,7 +98,7 @@ export default function Navbar() {
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
                   className={clsx(
-                    "block font-[family-name:var(--font-oswald)] text-lg font-medium tracking-wider px-4 py-3 rounded-sm transition-all duration-300",
+                    "block font-[family-name:var(--font-oswald)] text-lg font-medium tracking-wider px-4 py-3 min-h-[44px] rounded-sm transition-all duration-300",
                     pathname === link.href
                       ? "text-orange bg-orange/10"
                       : "text-white/70 hover:text-orange"
@@ -110,7 +110,7 @@ export default function Navbar() {
               <Link
                 href="/iletisim"
                 onClick={() => setMobileOpen(false)}
-                className="block text-center font-[family-name:var(--font-oswald)] text-lg font-bold tracking-wider bg-orange text-black px-6 py-3 rounded-sm mt-4"
+                className="block text-center font-[family-name:var(--font-oswald)] text-lg font-bold tracking-wider bg-orange text-black px-6 py-3 min-h-[44px] rounded-sm mt-4"
               >
                 ÜCRETSİZ DENEME
               </Link>

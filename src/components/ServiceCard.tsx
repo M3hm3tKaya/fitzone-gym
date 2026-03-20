@@ -47,7 +47,7 @@ export default function ServiceCard({ title, description, icon, index }: Service
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
-      className="group relative bg-card rounded-sm p-8 border-t-2 border-orange hover:border-orange/80 transition-all duration-300 hover:-translate-y-1"
+      className="group relative bg-card rounded-sm p-5 sm:p-6 md:p-8 border-t-2 border-orange hover:border-orange/80 transition-all duration-300 hover:-translate-y-1"
     >
       <div className="w-14 h-14 bg-orange/10 rounded-sm flex items-center justify-center text-orange mb-6 group-hover:bg-orange group-hover:text-black transition-all duration-300">
         <ServiceIcon icon={icon} />

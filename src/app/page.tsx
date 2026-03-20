@@ -44,7 +44,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="font-[family-name:var(--font-oswald)] text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-wider leading-[0.9] mb-6"
+              className="font-[family-name:var(--font-oswald)] text-5xl sm:text-6xl md:text-7xl lg:text-9xl font-bold tracking-wider leading-[0.9] mb-6"
             >
               LİMİTLERİNİ
               <br />
@@ -55,7 +55,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-muted text-lg md:text-xl max-w-lg mb-8 leading-relaxed"
+              className="text-muted text-base sm:text-lg md:text-xl max-w-lg mb-8 leading-relaxed"
             >
               Modern ekipmanlar, uzman antrenörler ve enerjik atmosfer ile
               hayalindeki forma kavuş.
@@ -69,7 +69,7 @@ export default function HomePage() {
             >
               <Link
                 href="/iletisim"
-                className="inline-flex items-center gap-2 font-[family-name:var(--font-oswald)] text-base font-bold tracking-wider bg-orange text-black px-8 py-4 rounded-full hover:bg-orange-dark transition-colors duration-300"
+                className="inline-flex items-center justify-center gap-2 font-[family-name:var(--font-oswald)] text-sm sm:text-base font-bold tracking-wider bg-orange text-black px-6 sm:px-8 py-4 min-h-[44px] rounded-full hover:bg-orange-dark transition-colors duration-300"
               >
                 ÜCRETSİZ DENEME
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -78,7 +78,7 @@ export default function HomePage() {
               </Link>
               <Link
                 href="/uyelik"
-                className="inline-flex items-center gap-2 font-[family-name:var(--font-oswald)] text-base font-bold tracking-wider border border-white/20 text-white px-8 py-4 rounded-full hover:border-orange hover:text-orange transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 font-[family-name:var(--font-oswald)] text-sm sm:text-base font-bold tracking-wider border border-white/20 text-white px-6 sm:px-8 py-4 min-h-[44px] rounded-full hover:border-orange hover:text-orange transition-all duration-300"
               >
                 ÜYELİK PLANLARI
               </Link>
@@ -104,7 +104,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== SERVICES ===== */}
-      <section className="py-24 bg-black">
+      <section className="py-16 sm:py-24 bg-black overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             accent="HİZMETLERİMİZ"
@@ -123,14 +123,14 @@ export default function HomePage() {
       <StatsSection />
 
       {/* ===== TRAINERS PREVIEW ===== */}
-      <section className="py-24 bg-black">
+      <section className="py-16 sm:py-24 bg-black overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             accent="UZMAN KADRO"
             title="ANTRENÖRLER"
             subtitle="Alanında uzman antrenörlerimizle tanışın."
           />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-16">
             {trainers.slice(0, 3).map((trainer, i) => (
               <TrainerCard key={trainer.name} {...trainer} index={i} />
             ))}
@@ -138,7 +138,7 @@ export default function HomePage() {
           <div className="text-center mt-12">
             <Link
               href="/antrenorler"
-              className="inline-flex items-center gap-2 font-[family-name:var(--font-oswald)] text-sm font-bold tracking-wider text-orange hover:text-white transition-colors duration-300"
+              className="inline-flex items-center gap-2 font-[family-name:var(--font-oswald)] text-sm font-bold tracking-wider text-orange hover:text-white transition-colors duration-300 py-3 min-h-[44px]"
             >
               TÜM ANTRENÖRLER
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -150,7 +150,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== MEMBERSHIP CTA ===== */}
-      <section className="py-24 bg-card relative overflow-hidden">
+      <section className="py-16 sm:py-24 bg-card relative overflow-hidden">
         <div className="absolute inset-0 diagonal-lines opacity-50" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -162,16 +162,16 @@ export default function HomePage() {
             <span className="font-[family-name:var(--font-oswald)] text-orange text-sm font-semibold tracking-[0.2em]">
               ÖZEL FIRSAT
             </span>
-            <h2 className="font-[family-name:var(--font-oswald)] text-5xl md:text-6xl lg:text-7xl font-bold tracking-wider uppercase mt-4 mb-6">
+            <h2 className="font-[family-name:var(--font-oswald)] text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-wider uppercase mt-4 mb-6">
               İLK HAFTA{" "}
               <span className="text-orange">ÜCRETSİZ</span>
             </h2>
-            <p className="text-muted text-lg max-w-xl mx-auto mb-10">
+            <p className="text-muted text-base sm:text-lg max-w-xl mx-auto mb-10">
               Hemen üye ol, ilk haftanı ücretsiz geçir. Tüm salon, dersler ve ekipmanlara sınırsız erişim.
             </p>
             <Link
               href="/iletisim"
-              className="inline-flex items-center gap-2 font-[family-name:var(--font-oswald)] text-lg font-bold tracking-wider bg-orange text-black px-10 py-4 rounded-sm hover:bg-orange-dark transition-colors duration-300"
+              className="inline-flex items-center justify-center gap-2 font-[family-name:var(--font-oswald)] text-base sm:text-lg font-bold tracking-wider bg-orange text-black px-8 sm:px-10 py-4 min-h-[44px] rounded-sm hover:bg-orange-dark transition-colors duration-300"
             >
               HEMEN BAŞLA
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -183,14 +183,14 @@ export default function HomePage() {
       </section>
 
       {/* ===== TRANSFORMATIONS ===== */}
-      <section className="py-24 bg-black">
+      <section className="py-16 sm:py-24 bg-black overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             accent="BAŞARI HİKAYELERİ"
             title="DÖNÜŞÜMLER"
             subtitle="Üyelerimizin ilham veren dönüşüm hikayeleri."
           />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-16">
             {transformations.map((t, i) => (
               <TransformationCard key={t.name} {...t} index={i} />
             ))}

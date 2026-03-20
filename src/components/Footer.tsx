@@ -36,7 +36,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-muted text-sm hover:text-orange transition-colors duration-300"
+                    className="text-muted text-sm hover:text-orange transition-colors duration-300 flex items-center py-1.5 min-h-[44px] sm:min-h-0"
                   >
                     {link.label}
                   </Link>
@@ -98,7 +98,7 @@ export default function Footer() {
                 <a
                   key={social}
                   href="#"
-                  className="w-9 h-9 bg-white/5 rounded-sm flex items-center justify-center hover:bg-orange hover:text-black transition-all duration-300 text-muted"
+                  className="w-11 h-11 min-w-[44px] min-h-[44px] bg-white/5 rounded-sm flex items-center justify-center hover:bg-orange hover:text-black transition-all duration-300 text-muted"
                   aria-label={social}
                 >
                   <SocialIcon name={social} />
